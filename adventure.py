@@ -23,4 +23,7 @@ while True:
             valid_directions[k] = possible_position
 
     direction = raw_input('which direction do you want to go?\n')
-    position = valid_directions[direction]
+    if direction in valid_directions:
+        position = valid_directions[direction]
+    else:
+        print 'This direction is not valid. Please try again.\n\n'
